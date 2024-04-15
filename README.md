@@ -39,7 +39,7 @@ Protocol does X, Y, Z
 
 # Disclaimer
 
-The YOUR_NAME_HERE team makes all effort to find as many vulnerabilities in the code in the given time period, but holds no responsibilities for the findings provided in this document. A security audit by the team is not an endorsement of the underlying business or product. The audit was time-boxed and the review of the code was solely on the security aspects of the Solidity implementation of the contracts.
+The team makes all effort to find as many vulnerabilities in the code in the given time period, but holds no responsibilities for the findings provided in this document. A security audit by the team is not an endorsement of the underlying business or product. The audit was time-boxed and the review of the code was solely on the security aspects of the Solidity implementation of the contracts.
 
 # Risk Classification
 
@@ -50,7 +50,6 @@ The YOUR_NAME_HERE team makes all effort to find as many vulnerabilities in the 
 | Likelihood | Medium | H/M    | M      | M/L |
 |            | Low    | M      | M/L    | L   |
 
-We use the [CodeHawks](https://docs.codehawks.com/hawks-auditors/how-to-evaluate-a-finding-severity) severity matrix to determine severity. See the documentation for more details.
 
 # Audit Details 
 ## Scope 
@@ -334,7 +333,7 @@ Place the following into `TSwapPool.t.sol`.
 
 Index event fields make the field more quickly accessible to off-chain tools that parse events. However, note that each index field costs extra gas during emission, so it's not necessarily best to index the maximum allowed per event (three fields). Each event should use three indexed fields if there are three or more fields, and gas usage is not particularly of concern for the events in question. If there are fewer than three fields, all of the fields should be indexed.
 
-- Found in src/TSwapPool.sol: Line: 44
-- Found in src/PoolFactory.sol: Line: 37
-- Found in src/TSwapPool.sol: Line: 46
-- Found in src/TSwapPool.sol: Line: 43
+- Found in src/TSwapPool.sol: Line: 44.
+- Found in src/PoolFactory.sol: Line: 37.
+- Found in src/TSwapPool.sol: Line: 46.
+- Found in src/TSwapPool.sol: Line: 43.
