@@ -35,7 +35,7 @@ header-includes:
 
 # Protocol Summary
 
-Protocol does X, Y, Z
+Protocol does X, Y, Z.
 
 # Disclaimer
 
