@@ -178,7 +178,7 @@ Consider changing the implementation to use `swapExactInput` instead of `swapExa
     }
 ```
 
-Additionally, it might be wise to add a deadline to the function, as there is currently no deadline. (MEV later)
+Additionally, it might be wise to add a deadline to the function, as there is currently no deadline (MEV later).
 
 ### [H-5] In `TSwapPool::_swap` the extra tokens given to users after every `swapCount` breaks the protocol invariant of `x * y = k`
 
