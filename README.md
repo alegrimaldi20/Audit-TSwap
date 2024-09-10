@@ -69,7 +69,7 @@ The team makes all effort to find as many vulnerabilities in the code in the giv
 # Findings
 ## High
 
-### [H-1] `TSwapPool::deposit` is missing deadline check causing transactions to complete even after the deadline
+### [H-1] `TSwapPool::deposit` is missing deadline check causing transactions to complete even after the deadline.
 
 **Description:** The `deposit` function accepts a deadline parameter, which according to the documentation is "The deadline for the transaction to be completed by". However, this parameter is never used. As a consequence, operationrs that add liquidity to the pool might be executed at unexpected times, in market conditions where the deposit rate is unfavorable. 
 
@@ -95,7 +95,7 @@ function deposit(
     {
 ```
 
-### [H-2] Incorrect fee calculation in `TSwapPool::getInputAmountBasedOnOutput` causes protocll to take too many tokens from users, resulting in lost fees
+### [H-2] Incorrect fee calculation in `TSwapPool::getInputAmountBasedOnOutput` causes protocll to take too many tokens from users, resulting in lost fees.
 
 **Description:** The `getInputAmountBasedOnOutput` function is intended to calculate the amount of tokens a user should deposit given an amount of tokens of output tokens. However, the function currently miscalculates the resulting amount. When calculating the fee, it scales the amount by 10_000 instead of 1_000. 
 
